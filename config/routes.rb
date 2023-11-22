@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   resources :restaurants, only: [:index, :new, :show, :update] do
-    resources :reviews, only: [:new, :create]
+    resources :reviews, only: [:create]
   end
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
