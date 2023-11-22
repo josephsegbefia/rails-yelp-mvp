@@ -1,8 +1,11 @@
 <div class="container">
   <h1>All Restaurants</h1>
-  <ul>
+  <div class="cards">
     <% @restaurants.each do |restaurant| %>
-      <li><%= restaurant.name%>| <%= link_to "Show details", restaurant_path(restaurant)%></li>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= restaurant.image_url %>)">
+         <%= link_to restaurant.name, restaurant_path(restaurant), class: "link" %>
+      </div>
     <% end %>
-  </ul>
+  </div>
+
 </div>
